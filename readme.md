@@ -136,7 +136,7 @@ git commit -m "Add a template for index page"
 
 ## Добавление формы ввода данных
 
-1. В файле `index.html` сразу после заголовка (внутри тега `body`) добавьте следующие теги:
+1. В файле `index.html` внутри тега `body`, сразу после заголовка  добавьте следующие теги:
 
 ```html
 <form>
@@ -193,7 +193,7 @@ git commit -m "Add a form to sum two numbers"
 2. В файле `app.py` измените функцию `index_page`():
 
 ```python
-@app.route("/", method=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def index_page():
     try:
         a = int(request.form["a"])
